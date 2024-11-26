@@ -1,148 +1,238 @@
-/* General Reset */
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar {
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background-color: #008B8B;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-.navbar .logo {
+.logo {
+    color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    gap: 2rem;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #e0e0e0;
 }
 
 .search-container {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 .search-container input {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    width: 300px;
 }
 
 .search-container button {
-    padding: 5px 10px;
-    background-color: #ff5733;
-    color: white;
+    padding: 0.5rem 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: 500;
 }
 
-.search-container button:hover {
-    background-color: #ff7849;
-}
-
-/* Home Section */
-.home {
-    text-align: center;
-    background: url('background.jpg') no-repeat center center/cover;
+.search-btn {
+    background-color: #006666;
     color: white;
-    padding: 100px 20px;
 }
 
-.home h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.clear-btn {
+    background-color: #e0e0e0;
+    color: #333;
 }
 
-.home p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.search-btn:hover {
+    background-color: #005555;
 }
 
-.btn-book {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.clear-btn:hover {
+    background-color: #d0d0d0;
 }
 
-.btn-book:hover {
-    background-color: #0056b3;
-}
-
-/* About Us Section */
-.about {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
-
-.about .team {
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
 }
 
-.about .team-member {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
+.hero-content {
+    color: white;
+    max-width: 800px;
+    margin-left: 5rem;
 }
 
-/* Contact Section */
-.contact {
-    padding: 50px 20px;
-    background-color: #f1f1f1;
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
-.contact form {
-    max-width: 500px;
-    margin: auto;
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #008B8B;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #006666;
+}
+
+.social-links {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
+    z-index: 1000;
 }
 
-.contact form input,
-.contact form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.contact form button {
-    padding: 10px 20px;
-    background-color: #28a745;
+.social-links a {
     color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: rgba(0, 139, 139, 0.7);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #008B8B;
+}
+
+
+
+/* .hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 139, 139, 0.8), rgba(0, 139, 139, 0.8)),
+                url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000') center/cover no-repeat;
+    color: white;
+    display: flex;
+} */
+
+.content {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
 }
 
-.contact form button:hover {
-    background-color: #218838;
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #006666;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #005555;
 }

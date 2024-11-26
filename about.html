@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - TravelBloom</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <style>
+        .hero {
+            position: relative;
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .company-info {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .company-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .team-section {
+            background-color: #f5f5f5;
+            padding: 4rem 2rem;
+        }
+
+        .team-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #008B8B;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #008B8B;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-avatar i {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            color: #008B8B;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .member-description {
+            color: #777;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">TravelBloom</a>
+        
+        <div class="nav-links">
+            <a href="/">Accueil</a>
+            <a href="/about">À propos</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Entrez une destination ou un mot-clé" id="searchInput">
+            <button class="search-btn" onclick="search()">Rechercher</button>
+            <button class="clear-btn" onclick="clearSearch()">Effacer</button>
+        </div>
+    </nav>
+
+    <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="hero">
+        <h1>ABOUT US</h1>
+    </div>
+
+    <div class="company-info">
+        <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to provide the best experience for people travelling to different destinations around the world.</p>
+        <p>Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in putting our customers first and working together to achieve our goals.</p>
+        <p>Feel free to explore our website to learn more about what we offer!</p>
+    </div>
+
+    <section class="team-section">
+        <h2 class="team-title">Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">John Doe</h3>
+                <p class="member-role">CEO</p>
+                <p class="member-description">John is responsible for leading our company's strategic vision and growth initiatives.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">Celina Thomas</h3>
+                <p class="member-role">Team Lead</p>
+                <p class="member-description">Celina leads our talented team of travel experts and ensures exceptional service delivery.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="member-name">Mike Tysen</h3>
+                <p class="member-role">Delivery Head</p>
+                <p class="member-description">Mike oversees our travel operations and ensures smooth execution of all travel plans.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
